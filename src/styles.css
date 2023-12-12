@@ -1,0 +1,98 @@
+body{
+  background-color: #A2C579;
+  color: black;
+  font-family: monospace;
+  margin:0;
+}
+
+#title1 {
+  color:#016A70;
+  font-size: 56px;
+  flex: auto;
+  justify-content: center;
+  text-align: center;
+  border: #707023;
+}
+
+#myForm{
+  width: 100%;
+  background-color: #707023;
+  padding:50px;
+  display: flex;
+  position: fixed;
+  gap:20px;
+  bottom: 0px;
+  /* left:15%; */
+  /* grid: auto;
+  grid-template-columns: auto; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow-y: auto;
+}
+
+.in{
+  display: none;
+  padding: 40px;
+  color: black;
+  font-size: x-large;
+  font-weight: bold;
+  /* text-align: center; */
+  background-color: #D2DE32;
+}
+
+#epik{
+  margin-bottom: 110px;
+}
+
+.op{
+  display: block;
+  padding: 40px;
+  /* text-align: center; */
+  color: white;
+  font-size: x-large;
+  font-weight: bold;
+  background-color: #016A70;
+  white-space: pre;
+  text-wrap:pretty;
+}
+
+.labels{
+  font-size: large;
+}
+
+#fileInput{
+  display: none;
+}
+
+#inputData{
+  text-indent: 10px;
+  border-radius: 20px;
+  background-color: #016A70;
+  width:850px;
+  height: 30px;
+  font-size: xx-large;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.uploadLogo{
+  height: 40px;
+  width:40px;
+}
+
+@media screen and (max-width:600px) {
+  #myForm{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      bottom: 50px;
+      /* left:10%; */
+      /* grid: auto;
+      grid-template-columns: auto; */
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
+  
+}
