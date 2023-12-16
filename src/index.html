@@ -66,7 +66,7 @@
         <div class="forms">
             <form id="myForm" enctype="multipart/form-data">
                 <!-- <input type="text" id="inputData" name="inputData" required> -->
-                <input type="text" name="name" class="question" style="text-transform: capitalize;" id="nme" required autocomplete="off" />
+                <input type="text" name="name" class="question" id="nme" required autocomplete="off" />
                 <label for="nme"><span>Ask a Query</span></label>
                 <input type="submit" id="submit-btn" class="btn btn-dark mb-2 d-none" onclick="submitForm() "></input>
             </form>
@@ -74,6 +74,10 @@
                 <img class="uploadLogo mb-2" src="upload.svg" alt="Upload Image" onclick="document.getElementById('fileInput').click();">
                 <input type="file" id="fileInput" name="fileInput" accept="image/*, application/pdf" onchange="uploadFile()" >
             </form>
+            <div class="form-check form-switch">
+                <input class="form-check-input mt-3" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label text-black" for="flexSwitchCheckDefault">PRO</label>
+            </div>
         </div>
     </div>
 </body>

@@ -2,6 +2,15 @@
 // var inputDiv = document.getElementById("input");
 var parentDiv = document.getElementById("epik")
 var memory
+const switchElement = document.getElementById('flexSwitchCheckDefault');
+var endpoint_chat
+var endpoint_img
+switchElement.addEventListener('change', function() {
+	const isSwitchOn = this.checked;
+	console.log(`Toggle switch is ${isSwitchOn ? 'on' : 'off'}`);
+	endpoint_chat = isSwitchOn ? 'http://localhost:5000/gpt' : "http://localhost:5000"
+	endpoint_img = isSwitchOn ? 'http://localhost:5000/gpt_img' : "http://localhost:5000/img"
+});
 function scrollDown() {
 	window.scrollTo(0, 9999999999999);
   }
@@ -21,6 +30,7 @@ function scrollDown() {
     document.getElementById('nme').value = '';
 });
 function submitForm() {
+
 	scrollDown()
 	var outChars = ''
     var formData = new FormData(document.getElementById("myForm"));
@@ -88,7 +98,7 @@ function submitForm() {
         parentDiv.appendChild(newOutputDiv)
 		scrollDown()
         // If no file is selected, send to a generic endpoint
-        fetch('http://localhost:5000', {
+        fetch(endpoint_chat, {
             method: 'POST',
             body: formData
         })
@@ -185,7 +195,7 @@ function uploadFile(){
 	scrollDown()
     var formData = new FormData();
     formData.append('fileInput', fileInputValue);
-    fetch('http://localhost:5000/img', {
+    fetch(endpoint_img, {
         method: 'POST',
         body: formData
     })
@@ -470,3 +480,4 @@ function uploadFile(){
 		});
 	}
 })(jQuery);
+
